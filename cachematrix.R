@@ -6,7 +6,8 @@
 # 3. set the value of inverse of the matrix
 # 4. get the value of inverse of the matrix
 ###################################################################################
-makeCacheMatrix <- function(x = matrix()) {
+makeCacheMatrix <- function(x = matrix()) 
+{
     in_ <- NULL
     set <- function(y) {
         x <<- y
@@ -26,7 +27,8 @@ makeCacheMatrix <- function(x = matrix()) {
 ###################################################################################
 cacheSolve <- function(x, ...) {
     in_ <- x$getinverse()
-    if(!is.null(in_)) {
+    if(!is.null(in_)) # retrieve previous calculated 
+    {
         message("Getting cached data.")
         return(in_)
     }
